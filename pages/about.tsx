@@ -1,9 +1,28 @@
 import {motion} from "framer-motion"
 import Head from "next/head";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
+import TechnologyCard from "../components/TechnologyCard";
+
+const technology = [
+    {
+        id: 1,
+        typeOfSoftware: 'Frontend',
+    },
+    {
+        id: 2,
+        typeOfSoftware: 'Backend',
+    },
+    {
+        id: 3,
+        typeOfSoftware: 'Ux/Ui',
+    },
+    {
+        id: 4,
+        typeOfSoftware: 'Methodology',
+    }
+]
 
 export default function About(){
-
     return(
         <div>
         <Head>
@@ -15,27 +34,23 @@ export default function About(){
                 <Navbar />
             </header>
             <main>
-                {/*TODO: Modify Color of the text*/}
-        <div className='mt-10 mb-5 flex flex-col mx-auto  lg:w-[1100px] max-md:flex-col max-sm:flex-col max-sm:w-full'>
-            <motion.h2 className='text-5xl p-5 font-bold max-sm:text-3xl bg-gradient-to-r text-transparent from-slate-200 bg-clip-text to-amber-500'
+        <div className='mt-10 mb-5 overflow-hidden flex flex-col mx-auto  lg:w-[1100px] max-md:flex-col max-sm:flex-col max-sm:w-full'>
+            <motion.h2 className='text-5xl p-5 font-bold max-sm:text-3xl bg-gradient-to-r bg-clip-text  text-transparent
+            from-slate-50 via-amber-200 to-amber-500
+            animate-text'
             >About Me</motion.h2>
             <p className='p-5 text-white text-2xl max-sm:text-[16px]'>One thing that describes me very well is that I like to teach what I learn, and to help others in their endeavours. </p>
             <p className='p-5 text-white text-2xl max-sm:text-[16px]'>I love researching, working in teams and trying new technologies, I believe that learning should never stop and that makes me keep an eye on any new technology.</p>
         </div>
-            {/*<div className='w-1/4 mx-auto'>*/}
-            {/*    <hr/>*/}
-            {/*</div>*/}
-                <div className='mx-auto p-10 w-3/5 max-sm:w-full'>
-                {/*TODO CREAR EL COMPONENTE QUE RENDERIZE UN DIV CON UN H4 Y UN PARRAFO CORTO*/}
-                    <div className='w-4/4 flex flex-row p-5  max-md:flex-row border max-sm:flex-col max-sm:w-full'>
+                <div className='mx-auto overflow-hidden p-10 w-2/5 lg:w-2/5 md:w-4/5 max-sm:w-full'>
+                    <div className='w-4/4 flex flex-row p-5  max-md:flex-row   max-sm:flex-col max-sm:w-full'>
                         <div className='w-2/6 flex flex-row items-center justify-center'>
                             <motion.h4 className='text-3xl font-bold text-white mb-10'
                                        initial={{opacity: 0, y: 200}}
                                        animate={{opacity: 1, y: 0}}
                                        transition={{duration: 1.3}}>20<span className='text-amber-200'>22</span></motion.h4>
                         </div>
-                        {/*TODO al cargar el mode mobile y cargar las animaciones se scala el texto ARREGLAR lo mismo en el HOME*/}
-                        <motion.div className=' p-5 w-3/6 flex flex-row items-center justify-start max-sm:w-full'
+                        <motion.div className=' p-5 w-4/6 border flex flex-row items-center justify-start max-md:w-4/5 max-sm:w-full'
                                     initial={{opacity: 0, x: 400}}
                                     animate={{opacity: 1, x: 0}}
                                     transition={{duration: 1.3}}>
@@ -48,6 +63,16 @@ export default function About(){
                         </ul>
                         </motion.div>
                     </div>
+                </div>
+                <div className='mx-auto overflow-hidden p-10 w-3/5 max-sm:w-full'>
+                    <h2 className='flex flex-row items-center justify-center text-4xl  bg-gradient-to-r text-transparent from-slate-50 bg-clip-text to-amber-500 font-semibold'>Stack</h2>
+                </div>
+                <div className='w-4/6 overflow-hidden flex flex-row mx-auto items-start justify-around gap-10 py-5 max-sm:grid grid-cols-2 max-sm:w-full'>
+                {technology.map((technology) => (
+                    <div className='text-white ' key={technology.id}>
+                    <TechnologyCard key={technology.id} typeOfSoftware={technology.typeOfSoftware} />
+                    </div>
+                ))}
                 </div>
             </main>
         </div>

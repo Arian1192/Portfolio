@@ -60,7 +60,9 @@ const Navbar = () => {
 						typeSpeed={50}
 						backSpeed={100}
 						loop
-						className="font-semibold text-3xl bg-gradient-to-r text-transparent from-slate-200 bg-clip-text to-amber-400"
+						className="font-semibold text-3xl bg-gradient-to-r bg-clip-text  text-transparent
+            from-slate-50 via-amber-200 to-amber-500
+            animate-text"
 					/>
 				</div>
 				<ul className="flex flex-row gap-12 max-sm:hidden text-white text-2xl  justify-between items-end">
