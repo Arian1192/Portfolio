@@ -42,7 +42,7 @@ export default function About(){
             <p className='p-5 text-white text-2xl max-sm:text-[16px]'>One thing that describes me very well is that I like to teach what I learn, and to help others in their endeavours. </p>
             <p className='p-5 text-white text-2xl max-sm:text-[16px]'>I love researching, working in teams and trying new technologies, I believe that learning should never stop and that makes me keep an eye on any new technology.</p>
         </div>
-                <div className='mx-auto overflow-hidden p-10 w-2/5 lg:w-2/5 md:w-4/5 max-sm:w-full'>
+                <div className='mx-auto overflow-hidden p-10 w-2/5 max-lg:w-3/5 max-md:w-[500px] max-sm:w-full'>
                     <div className='w-4/4 flex flex-row p-5  max-md:flex-row   max-sm:flex-col max-sm:w-full'>
                         <div className='w-2/6 flex flex-row items-center justify-center'>
                             <motion.h4 className='text-3xl font-bold text-white mb-10'
@@ -67,9 +67,9 @@ export default function About(){
                 <div className='mx-auto overflow-hidden p-10 w-3/5 max-sm:w-full'>
                     <h2 className='flex flex-row items-center justify-center text-4xl  bg-gradient-to-r text-transparent from-slate-50 bg-clip-text to-amber-500 font-semibold'>Stack</h2>
                 </div>
-                <div className='w-4/6 overflow-hidden flex flex-row mx-auto items-start justify-around gap-10 py-5 max-sm:grid grid-cols-2 max-sm:w-full'>
+                <div className='w-3/5 mx-auto max-md:w-11/12 flex flex-row items-start justify-around gap-10 py-5 max-sm:grid grid-cols-2 max-sm:w-full'>
                 {technology.map((technology) => (
-                    <div className='text-white ' key={technology.id}>
+                    <div className='text-white' key={technology.id}>
                     <TechnologyCard key={technology.id} typeOfSoftware={technology.typeOfSoftware} />
                     </div>
                 ))}
