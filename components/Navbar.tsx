@@ -32,7 +32,6 @@ const sections: ISection[] = [
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	console.log(menuOpen);
 	return (
 		<>
 			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">

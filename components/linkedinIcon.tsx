@@ -1,4 +1,4 @@
-import * as React from "react"
+
 const GotoLinKedin = () => {
         window.open('https://www.linkedin.com/in/ariancollaso/', '_blank')
 }

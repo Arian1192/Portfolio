@@ -1,4 +1,3 @@
-import * as React from "react"
 
 const GotoGitHub = () => {
         window.open('https://github.com/Arian1192', '_blank')

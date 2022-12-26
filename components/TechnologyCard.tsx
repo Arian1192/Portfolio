@@ -1,6 +1,6 @@
 import TechnologySoftware from "./TechnologySoftware";
 import { FaReact, FaNode, FaFigma } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
+import { IoLogoJavascript } from "react-icons/io5";
 import {
 	SiAdobeillustrator,
 	SiTypescript,
@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 import { DiScrum, DiMongodb } from "react-icons/di";
 import { ISoftwareElement } from "../Interfaces/ISoftwareElement";
-import { TbBrandNextjs } from "react-icons/all";
+import { TbBrandNextjs } from "react-icons/tb";
 import dynamic from "next/dynamic";
 
 const TechnologyCard = (props: any) => {
