@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import IconHambuger from "./IconHambuger";
 import CloseIconHamburger from "./CloseIconHamburger";
 import { motion } from "framer-motion";
@@ -31,14 +31,28 @@ const sections: ISection[] = [
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [color, setColor] = useState('transparent')
+	const [textcolor, setTextColor] = useState('white')
+	useEffect(() => {
+        const changeColor = () => {
+            if (window.scrollY >= 80) {
+                setColor('#21222c')
+                setTextColor('#000')
+            } else {
+                setColor('transparent')
+                setTextColor('black')
+            }
+        }
+        window.addEventListener('scroll', changeColor)
+    }, [])
 
 	return (
-		<div className="fixed left-0 top-0 w-full z-10 bg-[#21222c] ease-in duration-200">
+		<div style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-10  ease-in duration-200">
 			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
 				<div>
 					<span className="text-white">dev.</span>
 				</div>
-				<ul className="flex flex-row gap-12 max-sm:hidden text-white text-2xl  justify-between items-end">
+				<ul style={{color: `${textcolor}`}} className="flex flex-row gap-12 max-sm:hidden text-white text-2xl  justify-between items-end">
 					{sections.map((section: ISection) => (
 						<li key={section.id} className="hover:text-amber-200">
 							<Link href={section.link}>{section.name}</Link>
