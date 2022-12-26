@@ -7,7 +7,7 @@ const TechnologySoftware = (props: any) => {
 	console.log(component);
 	return (
 		<div
-			className="flex p-1 flex-row cursor-pointer justify-start gap-5 max-sm:w-full "
+			className=" flex flex-row p-1 ml-10  cursor-pointer justify-start gap-5 max-sm:w-full "
 			onClick={() => handleClick(website)}
 		>
 			<h2 className="text-3xl mb-5 max-sm:text-1xl hover:text-transparent max-sm:text-[16px] bg-clip-text bg-gradient-to-r from-slate-200 to-amber-400">

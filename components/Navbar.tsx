@@ -58,7 +58,7 @@ const Navbar = () => {
 			</div>
 			{menuOpen && (
 				<motion.div
-					className="w-full  mx-auto text-3xl bg-black"
+					className="w-full mx-auto text-3xl text-white  bg-cyan-800  absolute top-15 left-0 z-50"
 					animate={{
 						scale: [0, 1],
 						x: [-600, 0],

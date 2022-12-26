@@ -95,7 +95,7 @@ const TechnologyCard = (props: any) => {
 
 	const { typeOfSoftware } = props;
 	return (
-		<div className="w-full  justify-items-start max-sm:w-full p-10">
+		<div className="w-full flex flex-col  items-center max-sm:w-full p-5">
 			<h2
 				className="text-3xl mb-10 font-semibold bg-gradient-to-r bg-clip-text  text-transparent
             from-slate-50 via-amber-200 to-amber-500

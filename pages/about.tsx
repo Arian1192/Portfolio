@@ -52,7 +52,7 @@ export default function About() {
 						eye on any new technology.
 					</p>
 				</div>
-				<div className="mx-auto  overflow-hidden p-10 w-3/5 max-lg:w-3/5 max-md:w-[500px] md:w-[900px]max-sm:w-full">
+				<div className="mx-auto  overflow-hidden p-10 w-3/5 max-lg:w-3/5 max-md:w-[500px] md:w-[900px] max-sm:w-full">
 					<div className="w-4/4 flex flex-row p-5  max-md:flex-row   max-sm:flex-col max-sm:w-full">
 						<div className="w-2/6 flex flex-row items-center justify-center">
 							<motion.h4
@@ -90,11 +90,11 @@ export default function About() {
 					</div>
 				</div>
 				<div className="mx-auto overflow-hidden p-10 w-3/5 max-sm:w-full">
-					<h2 className="flex flex-row items-center justify-center text-4xl  bg-gradient-to-r text-transparent from-slate-50 bg-clip-text to-amber-500 font-semibold">
+					<h2 className="flex flex-row items-center justify-center text-xl  bg-gradient-to-r text-transparent from-slate-50 bg-clip-text to-amber-500 font-semibold">
 						Stack
 					</h2>
 				</div>
-				<div className="w-3/5 mx-auto max-md:w-11/12 flex flex-row items-start justify-around gap-10 py-5 max-sm:grid grid-cols-2 max-sm:w-full">
+				<div className="w-3/5 mx-auto max-md:w-11/12 flex flex-row items-start justify-around gap-5 py-5 max-sm:grid grid-cols-2 max-sm:w-full">
 					{technology.map((technology) => (
 						<div className="text-white" key={technology.id}>
 							<TechnologyCard
