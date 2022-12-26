@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css";
 import PortfolioHome from "../components/PortfolioHome";
 import { motion } from "framer-motion";
 import About from "./about";
@@ -17,7 +15,7 @@ export default function Home() {
 			<header>
 				<Navbar />
 			</header>
-			<main className={styles.main}>
+			<main>
 				<>
 					<PortfolioHome
 						title="Oh hello there!"

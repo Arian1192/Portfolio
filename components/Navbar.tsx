@@ -33,7 +33,7 @@ const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<div className="fixed left-0 top-0 w-full z-10 ease-in duration-200">
+		<div className="fixed left-0 top-0 w-full z-10 bg-[#21222c] ease-in duration-200">
 			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
 				<div>
 					<span className="text-white">dev.</span>
@@ -51,7 +51,6 @@ const Navbar = () => {
 					</button>
 				)}
 			</div>
-
 			{menuOpen && (
 				<motion.div
 					className="w-full h-screen mx-auto text-3xl text-white  bg-cyan-800  absolute top-0 left-0"
