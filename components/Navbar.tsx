@@ -1,9 +1,9 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import IconHambuger from "./IconHambuger";
 import CloseIconHamburger from "./CloseIconHamburger";
 import { motion } from "framer-motion";
-import Typed from "react-typed";
+
 import { ISection } from "../Interfaces/ISection";
 
 const sections: ISection[] = [
@@ -37,30 +37,6 @@ const Navbar = () => {
 			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
 				<div>
 					<span className="text-white">dev.</span>
-					<Typed
-						strings={[
-							"",
-							"",
-							"",
-							"",
-							"Arian",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"Sleep",
-							"Code",
-							"Repeate",
-						]}
-						typeSpeed={50}
-						backSpeed={100}
-						loop
-						className="font-semibold text-3xl bg-gradient-to-r bg-clip-text  text-transparent
-            from-slate-50 via-amber-200 to-amber-500
-            animate-text"
-					/>
 				</div>
 				<ul className="flex flex-row gap-12 max-sm:hidden text-white text-2xl  justify-between items-end">
 					{sections.map((section: ISection) => (
