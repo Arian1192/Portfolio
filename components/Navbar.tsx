@@ -37,10 +37,10 @@ const Navbar = () => {
         const changeColor = () => {
             if (window.scrollY >= 80) {
                 setColor('#21222c')
-                setTextColor('#000')
+                setTextColor('white')
             } else {
                 setColor('transparent')
-                setTextColor('black')
+                setTextColor('white')
             }
         }
         window.addEventListener('scroll', changeColor)
