@@ -34,6 +34,7 @@ export default function About() {
 				<Navbar />
 			</header>
 			<main>
+				<>
 				<div className="mt-24 mb-5 overflow-hidden flex flex-col mx-auto  lg:w-[1100px] max-md:flex-col max-sm:flex-col max-sm:w-full">
 					<motion.h2
 						className="text-5xl p-5 font-bold max-sm:text-3xl bg-gradient-to-r bg-clip-text  text-transparent
@@ -104,7 +105,9 @@ export default function About() {
 						</div>
 					))}
 				</div>
+				</>
 			</main>
+			
 		</div>
 	);
 }
