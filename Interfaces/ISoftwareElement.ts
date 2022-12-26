@@ -3,6 +3,6 @@ export interface ISoftwareElement{
     id: number,
     softwareTechnology: string,
     name: string,
-    icon: any,
+    icon?: any,
     website: string
 }

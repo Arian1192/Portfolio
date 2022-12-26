@@ -1,10 +1,11 @@
 import TechnologySoftware from "./TechnologySoftware";
-import {FaReact, FaNode,FaFigma} from 'react-icons/fa'
-import {IoLogoJavascript} from 'react-icons/io'
-import {SiAdobeillustrator, SiTypescript, SiNotion, SiJsonwebtokens} from 'react-icons/si'
-import {DiScrum, DiMongodb} from 'react-icons/di'
+import {FaReact, FaNode,FaFigma} from 'react-icons/fa';
+import {IoLogoJavascript} from 'react-icons/io';
+import {SiAdobeillustrator, SiTypescript, SiNotion, SiJsonwebtokens} from 'react-icons/si';
+import {DiScrum, DiMongodb} from 'react-icons/di';
 import {ISoftwareElement} from "../Interfaces/ISoftwareElement";
 import {TbBrandNextjs} from "react-icons/all";
+import dynamic from "next/dynamic";
 
 
 const TechnologyCard = (props: any) => {
@@ -91,7 +92,7 @@ const TechnologyCard = (props: any) => {
 
     const {typeOfSoftware} = props
     return (
-        <div className='w-full  justify-items-start max-sm:w-full max-sm:ml-10'>
+        <div className='w-full  justify-items-start max-sm:w-full p-10'>
         <h2 className='text-3xl mb-10 font-semibold bg-gradient-to-r bg-clip-text  text-transparent
             from-slate-50 via-amber-200 to-amber-500
             animate-text max-sm:text-[20px] '>{typeOfSoftware}</h2>
@@ -106,4 +107,5 @@ const TechnologyCard = (props: any) => {
     )
 }
 
-export default TechnologyCard
+export default dynamic(() => Promise.resolve(TechnologyCard), {ssr: false})
+
