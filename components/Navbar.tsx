@@ -33,7 +33,7 @@ const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<>
+		<div className="fixed left-0 top-0 w-full z-10 ease-in duration-200">
 			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
 				<div>
 					<span className="text-white">dev.</span>
@@ -45,27 +45,29 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
-				{menuOpen && (
-					<button className="md:hidden " onClick={() => setMenuOpen(!menuOpen)}>
-						<CloseIconHamburger color="#ffffb3" />
-					</button>
-				)}
 				{!menuOpen && (
 					<button className="md:hidden " onClick={() => setMenuOpen(!menuOpen)}>
 						<IconHambuger color="#ffffb3" />
 					</button>
 				)}
 			</div>
+
 			{menuOpen && (
 				<motion.div
-					className="w-full mx-auto text-3xl text-white  bg-cyan-800  absolute top-15 left-0 z-50"
+					className="w-full h-screen mx-auto text-3xl text-white  bg-cyan-800  absolute top-0 left-0"
 					animate={{
 						scale: [0, 1],
 						x: [-600, 0],
 					}}
 				>
+					<div className=" flex flex-row items-center justify-end m-5">
+						<CloseIconHamburger
+							color="#ffffb3"
+							onClick={() => setMenuOpen(!menuOpen)}
+						/>
+					</div>
 					<motion.ul
-						className="absolute h-screen py-5 w-full bg-cyan-800 flex flex-col items-center justify-center gap-10 text-[#ffffb3] text-5xl"
+						className="absolute   h-screen w-full bg-cyan-800 flex flex-col items-center justify-center gap-10 text-[#ffffb3] text-5xl"
 						animate={{ scale: [0, 0.5, 1], y: [-600, 0] }}
 					>
 						{sections.map((section: ISection) => (
@@ -76,7 +78,7 @@ const Navbar = () => {
 					</motion.ul>
 				</motion.div>
 			)}
-		</>
+		</div>
 	);
 };
 export default Navbar;
