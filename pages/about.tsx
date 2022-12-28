@@ -38,7 +38,7 @@ export default function About() {
 				<div className="mt-16 mb-5 overflow-hidden flex flex-col mx-auto  lg:w-[1100px] max-md:flex-col max-sm:flex-col max-sm:w-full">
 					<motion.h2
 						className="text-5xl p-5 font-bold max-sm:text-3xl bg-gradient-to-r bg-clip-text  text-transparent
-            from-slate-50 via-amber-200 to-amber-500
+						from-purple-600 via-amber-200 to-amber-500
             animate-text"
 					>
 						About Me
@@ -91,7 +91,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className="mx-auto overflow-hidden p-10 w-3/5 max-sm:w-full">
-					<h2 className="flex flex-row items-center justify-center text-xl  bg-gradient-to-r text-transparent from-slate-50 bg-clip-text to-amber-500 font-semibold">
+					<h2 className="flex flex-row items-center justify-center text-5xl  bg-gradient-to-r text-transparent from-purple-600 bg-clip-text to-amber-500 font-semibold">
 						Stack
 					</h2>
 				</div>

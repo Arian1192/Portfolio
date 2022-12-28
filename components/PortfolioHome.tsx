@@ -11,7 +11,7 @@ const PortfolioHome = (props: any) => {
 				<div className="p-5 mx-auto  max-sm:w-full md:w-4/5 lg:w-3/6 ">
 					<motion.h1
 						className="text-7xl mt-10 pl-5 bg-gradient-to-r bg-clip-text  text-transparent
-            from-slate-50 via-amber-200 to-amber-500
+            from-purple-600 via-amber-200 to-amber-500
             animate-text max-md:text-5xl max-sm:text-4xl max-sm:w-full"
 						initial={{ opacity: 0, y: -100 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const PortfolioHome = (props: any) => {
 					</motion.h1>
 					<motion.h1
 						className="text-8xl pl-5 bg-gradient-to-r bg-clip-text  text-transparent
-            from-slate-50 via-amber-200 to-amber-500
+						from-purple-600 via-amber-200 to-amber-500
             animate-text max-md:text-4xl max-sm:text-5xl"
 						initial={{ opacity: 0, x: -200 }}
 						animate={{ opacity: 1, x: 0 }}
