@@ -4,7 +4,6 @@ const handleClick = (website: string): void => {
 
 const TechnologySoftware = (props: any) => {
 	const { technologyName, component, website } = props;
-	console.log(component);
 	return (
 		<div
 			className=" flex flex-row p-1 ml-10  cursor-pointer justify-start gap-5 max-sm:w-full "

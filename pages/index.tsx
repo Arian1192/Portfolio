@@ -2,8 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import PortfolioHome from "../components/PortfolioHome";
 import { motion } from "framer-motion";
-import About from "./about";
-
 export default function Home() {
 	return (
 		<div className="overflow-hidden">

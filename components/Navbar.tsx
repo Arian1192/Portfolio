@@ -35,7 +35,7 @@ const Navbar = () => {
 	const [textcolor, setTextColor] = useState('white')
 	useEffect(() => {
         const changeColor = () => {
-            if (window.scrollY >= 80) {
+            if (window.scrollY >= 10) {
                 setColor('#21222c')
                 setTextColor('white')
             } else {
@@ -47,8 +47,8 @@ const Navbar = () => {
     }, [])
 
 	return (
-		<div style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-10  ease-in duration-200">
-			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4  max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
+		<div style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-10">
+			<div className="w-4/5 p-5 mx-auto 2xl:w-2/4   max-md:w-full flex flex-row justify-between max-sm:w-full z-50">
 				<div>
 					<span className="text-white">dev.</span>
 				</div>
