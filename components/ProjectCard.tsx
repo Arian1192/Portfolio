@@ -5,7 +5,7 @@ const ProjectCard: React.FC<{repo:IGithubRepo}> = (props) => {
     const { repo } = props;
     const { name, description, html_url, language } = repo;
 
-    const handleClick = () => {
+    const handleClick = (html_url:string) => {
         window.open(html_url, "_blank");
     };
 	return (
