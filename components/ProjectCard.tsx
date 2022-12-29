@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { IGithubRepo } from "../utils/getReposFromGithub";
 import { useState } from "react";
+import { trace } from "console";
 
 const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 	const { repo } = props;
 	const { name, description, html_url, language } = repo;
-    const [open , setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	const handleClick = (html_url: string) => {
 		window.open(html_url, "_blank");
 	};
@@ -72,17 +73,34 @@ const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 		},
 	};
 
+	const style = {
+		color: "text-white",
+		transition: {
+			duration: 0.5,
+			type: "spring",
+			stiffness: 100,
+			ease: "easeIn",
+		},
+	}
+
+
 	return (
 		<motion.div
 			className="relative w-2/5  cursor-pointer max-md:w-2/5 md:w-2/5 max-sm:w-full px-3 py-2 mt-10 mb-24"
 			initial={{ opacity: 0, x: -700 }}
 			animate={{ opacity: 1, x: 0 }}
 			transition={{ duration: 0.4 }}
-			whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+			whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
+			
 		>
-			<div style={open? {height: "200px"}: undefined} className="absolute inset-0 mx-2 bg-gradient-to-bl bg-clip-padding from-yellow-400 to-purple-400 rotate-180  blur-md"></div>
-			<motion.div  style={open? {height: "200px"}:undefined} className="relative rounded-2xl bg-[#21222c] p-5   max-sm:w-full">
-				<div className='flex flex-row justify-between'>
+			<div
+				className="absolute inset-0 mx-2 bg-gradient-to-bl bg-clip-padding from-yellow-400 to-purple-400 rotate-180 blur-md "
+			></div>
+			<motion.div
+				className="relative rounded-2xl bg-[#21222c] p-5 max-sm:w-full"
+
+			>
+				<div className="flex flex-row justify-between">
 					<h1 className="text-white mb-5 text-ellipsis whitespace-nowrap overflow-hidden">
 						{name}
 					</h1>
@@ -92,9 +110,13 @@ const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6 text-white"
-                        style={{transform: open? "rotate(180deg)": undefined, transition: "0.5s", color:open? "palevioletred": "paleturquoise"} }
-                        onClick={() => setOpen(!open)}
+						className="w-6 h-6 text-white cursor-pointer"
+						style={{
+							transform: open ? "rotate(180deg)" : undefined,
+							transition: "0.5s",
+							color: open ? "palevioletred" : "paleturquoise",
+						}}
+						onClick={() => setOpen(!open)}
 					>
 						<path
 							strokeLinecap="round"
@@ -173,6 +195,10 @@ const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 							</motion.svg>
 						</motion.span>
 					</button>
+				</div>
+				<div className='mt-3 mb-2 '>
+				
+					{open && <span className="text-white">{description}</span>}
 				</div>
 			</motion.div>
 		</motion.div>
