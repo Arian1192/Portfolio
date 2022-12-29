@@ -4,6 +4,10 @@ import { IGithubRepo } from "../utils/getReposFromGithub";
 const ProjectCard: React.FC<{repo:IGithubRepo}> = (props) => {
     const { repo } = props;
     const { name, description, html_url, language } = repo;
+
+    const handleClick = () => {
+        window.open(html_url, "_blank");
+    };
 	return (
 		<motion.div className="relative w-2/5  cursor-pointer max-md:w-2/5 md:w-2/5 max-sm:w-full px-3 py-2 mt-10 mb-24" initial={{ opacity: 0, x: -700 }}
         animate={{ opacity: 1, x: 0 }}
@@ -43,7 +47,7 @@ const ProjectCard: React.FC<{repo:IGithubRepo}> = (props) => {
 									clipRule="evenodd"
 								/>
 							</svg>
-							<span className="text-white  max-sm:text-sm">Go to Github</span>
+							<span className="text-white  max-sm:text-sm" onClick={() => handleClick(html_url)}>Go to Github</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
