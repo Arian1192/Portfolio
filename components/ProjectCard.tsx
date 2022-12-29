@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { IGithubRepo } from "../utils/getReposFromGithub";
 
@@ -47,7 +48,7 @@ const ProjectCard: React.FC<{repo:IGithubRepo}> = (props) => {
 									clipRule="evenodd"
 								/>
 							</svg>
-							<span className="text-white  max-sm:text-sm" onClick={() => handleClick(html_url)}>Go to Github</span>
+							<span className="text-white  max-sm:text-sm" onClick={() => handleClick(html_url)} onTouchEnd={()=>{handleClick(html_url)}}>Go to Github</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
