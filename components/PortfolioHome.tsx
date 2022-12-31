@@ -47,7 +47,7 @@ const PortfolioHome = (props: any) => {
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.9 }}
 				>
-					<ParticlesBg />
+					<ParticlesBg height={'500px'} zIndex={1} />
 				</motion.div>
 			</div>
 			<div className="w-3/5 mx-auto flex flex-row items-center justify-center">

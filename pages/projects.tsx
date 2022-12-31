@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
@@ -7,7 +6,6 @@ import { getReposFromGithub, IGithubRepo } from "../utils/getReposFromGithub";
 
 
 export default function Projects({ repos }: { repos: IGithubRepo[] }) {
-
 	return (
 		<div className="overflow-hidden">
 			<Head>
@@ -42,9 +40,9 @@ export default function Projects({ repos }: { repos: IGithubRepo[] }) {
 					</p>
 				</motion.div>
 				<div className="w-3/5 p-5 gap-10 mx-auto flex flex-row flex-wrap justify-around items-start lg:w-3/5 max-md:w-3/5 md:w-full max-sm:w-full max-sm:flex-col">
-                    {repos.map((repo : IGithubRepo) => (
-                        <ProjectCard key={repo.id} repo={repo} />
-                    ))}
+					{repos.map((repo: IGithubRepo) => (
+							<ProjectCard key={repo.id} repo={repo} />
+					))}
 				</div>
 			</main>
 		</div>

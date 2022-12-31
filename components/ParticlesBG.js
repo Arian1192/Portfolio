@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Engine } from "tsparticles-engine";
 
-const ParticlesBG = () => {
+const ParticlesBG = ({height ,zIndex}) => {
     const particlesInit = useCallback(async (engine) => {
         await loadFull(engine);
     }, []);
@@ -14,14 +14,14 @@ const ParticlesBG = () => {
 
     return (
         <Particles
-            height="500px"
+            height={height}
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
                 fullScreen: {
                     enable: false,
-                    zIndex: 0
+                    zIndex: {zIndex},
                 },
                 fpsLimit: 120,
                 interactivity: {
@@ -97,7 +97,7 @@ const ParticlesBG = () => {
                 },
                 detectRetina: true,
             }}
-        />
+        >{Children}</Particles>
     );
 };
 
