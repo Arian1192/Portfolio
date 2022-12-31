@@ -125,13 +125,14 @@ const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 
 	return (
 		<motion.div
-			className="relative w-2/5 cursor-pointer max-md:w-2/5 md:w-2/5 max-sm:w-full px-3 py-2 mt-10 mb-10"
+			className="relative w-2/5 cursor-pointer max-md:w-2/5 md:w-2/5 max-sm:w-full p-2 mt-10 mb-10"
 			initial={{ opacity: 0, x: -700 }}
 			animate={{ opacity: 1, x: 0 }}
 		>
-			<div className="absolute border inset-0 mx-2 bg-gradient-to-bl bg-clip-padding from-yellow-400 to-purple-400 rotate-180 blur-md "></div>
-
-			<motion.div className="relative border border-gray-500 rounded-2xl bg-[#21222c] p-6 max-sm:w-full">
+			<div 
+			className="absolute border inset-0 mx-2 bg-gradient-to-bl bg-clip-padding from-yellow-400 to-purple-400 rotate-180 blur-md "></div>
+			<motion.div
+			className="relative border border-gray-500 rounded-2xl bg-[#21222c] p-6 max-sm:w-full">
 				<div className="mb-2 flex flex-row justify-around ">
 					<h1 className="text-white mb-5 text-ellipsis whitespace-nowrap overflow-hidden">
 						{name}
