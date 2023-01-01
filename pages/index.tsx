@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar";
 import PortfolioHome from "../components/PortfolioHome";
 import { motion } from "framer-motion";
 export default function Home() {
+
+	const date = new Date().getFullYear();
+	console.log(date)
+
 	return (
 		<div className="overflow-hidden">
 			<Head>
@@ -31,7 +35,7 @@ export default function Home() {
 			</main>
 
 			<footer className="w-full flex flex-row items-center justify-center mt-20 mb-20 text-lg text-white">
-				<h2>Made with ❤️ by Arian</h2>
+				<h2>{`@ ${date}`}</h2>
 			</footer>
 		</div>
 	);

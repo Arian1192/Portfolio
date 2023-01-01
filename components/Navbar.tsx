@@ -67,7 +67,7 @@ const Navbar = () => {
 			</div>
 			{menuOpen && (
 				<motion.div
-					className="w-full h-screen mx-auto text-3xl text-white  bg-cyan-800  absolute top-0 left-0"
+					className="w-full h-screen mx-auto text-3xl text-white  bg-[#21222c] absolute top-0 left-0"
 					animate={{
 						scale: [0, 1],
 						x: [-600, 0],
@@ -80,7 +80,7 @@ const Navbar = () => {
 						/>
 					</div>
 					<motion.ul
-						className="absolute   h-screen w-full bg-cyan-800 flex flex-col items-center justify-center gap-10 text-[#ffffb3] text-5xl"
+						className="absolute top-10 h-screen w-full bg-[#21222c] flex flex-col items-center justify-center gap-10 text-[#ffffb3] text-5xl"
 						animate={{ scale: [0, 0.5, 1], y: [-600, 0] }}
 					>
 						{sections.map((section: ISection) => (
