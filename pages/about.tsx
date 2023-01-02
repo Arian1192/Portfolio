@@ -54,8 +54,8 @@ export default function About() {
 							an eye on any new technology.
 						</p>
 					</div>
-					<div className="mx-auto  overflow-hidden p-10 w-2/5 max-lg:w-3/5 max-md:w-[500px] md:w-3/5 max-sm:w-full">
-						<div className="w-full flex flex-row p-5  max-md:flex-row   max-sm:flex-col max-sm:w-full">
+					<div className="mx-auto  overflow-hidden p-10 w-2/5 max-lg:w-3/5 lg:w-3/5  max-md:w-[500px] md:w-full max-sm:w-full">
+						<div className="w-full max-xl:w-2/5 xl:w-3/5  sm:w-full  mx-auto flex flex-row p-5  max-md:flex-row   max-sm:flex-col max-sm:w-full">
 							<div className="w-3/5 flex mx-auto flex-row items-center justify-center">
 								<motion.h4
 									className="text-3xl font-bold text-white mb-10"
@@ -66,7 +66,7 @@ export default function About() {
 									20<span className="text-amber-200">22</span>
 								</motion.h4>
 							</div>
-							<div className="w-full max-2xl:w-2/5 max-sm:w-full flex flex-col items-center justify-center">
+							<div className="w-full  max-2xl:w-3/6 max-sm:w-full flex flex-col items-center justify-center">
 								<ExperienceCard />
 							</div>
 						</div>
