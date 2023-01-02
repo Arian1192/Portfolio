@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>My Portfolio</title>
 				<meta name="description" content="Arian Portfolio Page" />
+				<html lang="es"></html>
 			</Head>
 			<Component {...pageProps} />
 		</>
