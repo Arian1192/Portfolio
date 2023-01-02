@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>My Portfolio</title>
-				<meta name="description" content="Arian Portfolio Page" />
+				<meta name="description" content="Portfolio Arian" />
 			</Head>
 			<Component {...pageProps} />
 		</>
