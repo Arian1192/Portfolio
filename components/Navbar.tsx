@@ -60,7 +60,7 @@ const Navbar = () => {
 					))}
 				</ul>
 				{!menuOpen && (
-					<button className="md:hidden " onClick={() => setMenuOpen(!menuOpen)}>
+					<button aria-label="menu" className="md:hidden " onClick={() => setMenuOpen(!menuOpen)}>
 						<IconHambuger color="#ffffb3" />
 					</button>
 				)}
