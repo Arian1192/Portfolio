@@ -5,11 +5,11 @@ import { Transform } from "stream";
 
 const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 	const { repo } = props;
-	const { name, description, html_url, language } = repo;
+	const { name, description, html_url, homepage } = repo;
 	const [open, setOpen] = useState(false);
 
-	const handleClick = (html_url: string) => {
-		window.open(html_url, "_blank");
+	const handleClick = (path: string) => {
+		window.open(path , "_blank");
 	};
 
 	const toggle = (state: any) => {
@@ -179,7 +179,11 @@ const ProjectCard: React.FC<{ repo: IGithubRepo }> = (props) => {
 										d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
 									/>
 								</motion.svg>
-								<span className="text-white max-sm:text-sm">Project Site</span>
+								<span className="text-white max-sm:text-sm"
+								onClick={() => handleClick(homepage)} 
+								onTouchEnd={() => {
+									handleClick(html_url);
+								}}>Project Site</span>
 							</motion.span>
 							<motion.span
 								className="text-yellow-300  flex group/code hover:text-green-500 items-center pl-2.5"
